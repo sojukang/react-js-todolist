@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useTodoState} from "../TodoContext";
 
 const TodoHeadBlock = styled.div`
     
@@ -30,6 +31,8 @@ const TodoHeadBlock = styled.div`
 `;
 
 function TodoHead() {
+    const todos = useTodoState();
+    console.log(todos);
     return (
         <TodoHeadBlock>
             <h1>2021년 6월 17일</h1>
